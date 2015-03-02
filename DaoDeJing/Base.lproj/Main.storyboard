@@ -49,5 +49,49 @@
             </objects>
             <point key="canvasLocation" x="570" y="433"/>
         </scene>
+        <!--Page View Controller-->
+        <scene sceneID="i88-rv-D8n">
+            <objects>
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="partialCurl" modalPresentationStyle="pageSheet" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="hv2-w8-abf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srP-U4-2Xf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1292" y="183"/>
+        </scene>
+        <!--PageContent-->
+        <scene sceneID="yZP-oY-J3x">
+            <objects>
+                <viewController storyboardIdentifier="PageContentViewController" title="PageContent" modalTransitionStyle="partialCurl" id="TNa-eg-nbG" customClass="PageContentViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rfw-sZ-moy"/>
+                        <viewControllerLayoutGuide type="bottom" id="qdb-uu-2z0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fuv-98-QCR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9U-SQ-MGi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="I9U-SQ-MGi" firstAttribute="leading" secondItem="Fuv-98-QCR" secondAttribute="leading" id="3G8-S9-wZe"/>
+                            <constraint firstItem="I9U-SQ-MGi" firstAttribute="top" secondItem="Fuv-98-QCR" secondAttribute="top" id="5lC-6Y-0Bw"/>
+                            <constraint firstAttribute="trailing" secondItem="I9U-SQ-MGi" secondAttribute="trailing" id="f84-nE-B0H"/>
+                            <constraint firstItem="qdb-uu-2z0" firstAttribute="top" secondItem="I9U-SQ-MGi" secondAttribute="bottom" id="nJo-4e-okW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="I9U-SQ-MGi" id="i5w-rv-jzP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gra-JC-ffe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1286" y="847"/>
+        </scene>
     </scenes>
 </document>
