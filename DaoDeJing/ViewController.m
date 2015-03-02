@@ -29,7 +29,7 @@
 
     [self initializeVerses];
     [self initializePageViewController];
-    UIFont *font = [UIFont fontWithName:@"STHeitiSC-Medium" size:24];
+    UIFont *font = [UIFont fontWithName:@"STHeitiSC-Medium" size:48];
    [_textView setFont:font];
 //    self.textView.text = self.simpleVerses[7];
 }
@@ -61,6 +61,8 @@
 
     return processedStrings;
 }
+
+#pragma mark - Create the Page View Controller
 
 -(void)initializePageViewController
 {
