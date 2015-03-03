@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8105B4781AA4549300502840 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8105B4771AA4549300502840 /* PageContentViewController.m */; };
+		8105B47A1AA4631100502840 /* EnglishVerses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8105B4791AA4631100502840 /* EnglishVerses.plist */; };
 		814B99071A290F2900BE4055 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 814B99061A290F2900BE4055 /* main.m */; };
 		814B990A1A290F2900BE4055 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 814B99091A290F2900BE4055 /* AppDelegate.m */; };
 		814B990D1A290F2900BE4055 /* DaoDeJing.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 814B990B1A290F2900BE4055 /* DaoDeJing.xcdatamodeld */; };
@@ -35,6 +36,7 @@
 /* Begin PBXFileReference section */
 		8105B4761AA4549300502840 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		8105B4771AA4549300502840 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
+		8105B4791AA4631100502840 /* EnglishVerses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnglishVerses.plist; sourceTree = "<group>"; };
 		814B99011A290F2900BE4055 /* DaoDeJing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaoDeJing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814B99051A290F2900BE4055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		814B99061A290F2900BE4055 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				814B99041A290F2900BE4055 /* Supporting Files */,
 				81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */,
 				81ECDF4A1A79D33C0042995F /* Simplified.plist */,
+				8105B4791AA4631100502840 /* EnglishVerses.plist */,
 			);
 			path = DaoDeJing;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				814B99131A290F2900BE4055 /* Main.storyboard in Resources */,
 				814B99181A290F2900BE4055 /* LaunchScreen.xib in Resources */,
 				81ECDF4B1A79D33C0042995F /* Simplified.plist in Resources */,
+				8105B47A1AA4631100502840 /* EnglishVerses.plist in Resources */,
 				81ECDF481A79D0310042995F /* DaoDeJing-Traditional.plist in Resources */,
 				814B99151A290F2900BE4055 /* Images.xcassets in Resources */,
 			);

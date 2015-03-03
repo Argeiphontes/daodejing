@@ -14,7 +14,7 @@
 @property NSString *verses;
 @property NSArray *simpleVerses;
 @property NSArray *traditionalVerses;
-@property NSDictionary *englishVerses;
+@property NSArray *englishVerses;
 @property NSAttributedString *attributedString;
 
 @end
@@ -29,8 +29,6 @@
 
     [self initializeVerses];
     [self initializePageViewController];
-    UIFont *font = [UIFont fontWithName:@"STHeitiSC-Medium" size:48];
-   [_textView setFont:font];
 //    self.textView.text = self.simpleVerses[7];
 }
 
@@ -38,13 +36,12 @@
 
 -(void)initializeVerses
 {
-    self.verses = @"1\n道可道，非常道\n名可名，非常名\n無名天地之始\n有名萬物之母\n故常無欲\n以觀其妙\n常有欲\n以觀其徼\n此兩者\n同出而異名\n同謂之玄\n玄之又玄\n衆妙之門";
-    self.englishVerses = @{@"1":@"1\n\nThe Dao that can be spoken is not the Dao.\n The name that can be named is not a name.\n No name is the beginning of creation. \nThe Name is the mother of all things. \nAbsent desire, you discover wonder; \nwith desire, you encounter the boundaries. \n\nThere are these two: that separate from the name, and that spoken from the darkness. \nDarkness from darkness, the gateway to myriad wonders.", @"2":@"b", @"3":@"c"};
-
 
     self.traditionalVerses = [self arrayOfStringsFromPlistWithName:@"DaoDeJing-Traditional"];
 
     self.simpleVerses = [self arrayOfStringsFromPlistWithName:@"Simplified"];
+
+    self.englishVerses = [self arrayOfStringsFromPlistWithName:@"EnglishVerses"];
 
     return;
 }
@@ -120,6 +117,7 @@
     // Create a new view controller and pass suitable data.
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     //    pageContentViewController.imageFile = self.pageImages[index];
+// This line needs to be edited to allow for Traditional, Simplified, or English Texts
     pageContentViewController.selectedVerseText = self.traditionalVerses[index];
     pageContentViewController.view.backgroundColor = [UIColor colorWithRed:0.2 green:0.4 blue:0.6 alpha:1];
 

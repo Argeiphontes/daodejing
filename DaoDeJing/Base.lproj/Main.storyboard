@@ -60,7 +60,7 @@
         <!--PageContent-->
         <scene sceneID="yZP-oY-J3x">
             <objects>
-                <viewController storyboardIdentifier="PageContentViewController" title="PageContent" modalTransitionStyle="partialCurl" id="TNa-eg-nbG" customClass="PageContentViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PageContentViewController" title="PageContent" id="TNa-eg-nbG" customClass="PageContentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Rfw-sZ-moy"/>
                         <viewControllerLayoutGuide type="bottom" id="qdb-uu-2z0"/>
@@ -70,22 +70,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9U-SQ-MGi">
-                                <rect key="frame" x="44" y="41" width="513" height="559"/>
+                                <rect key="frame" x="44" y="76" width="513" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c1U-nr-CvM">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Library" id="Pqq-Pj-UZ9"/>
+                                    <barButtonItem title="TOC" id="LN6-UX-yoA"/>
+                                    <barButtonItem title="Reading" id="ySk-7Z-XOi">
+                                        <connections>
+                                            <action selector="onReadingButtonPushed:" destination="TNa-eg-nbG" id="HCD-JE-BV4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Settings" id="BUV-VR-Kg5"/>
+                                    <barButtonItem title="Search" id="uz7-rT-bKX"/>
+                                    <barButtonItem title="Bookmark" id="76M-bw-RNr"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="I9U-SQ-MGi" firstAttribute="leading" secondItem="Fuv-98-QCR" secondAttribute="leading" id="3G8-S9-wZe"/>
                             <constraint firstItem="I9U-SQ-MGi" firstAttribute="top" secondItem="Fuv-98-QCR" secondAttribute="top" id="5lC-6Y-0Bw"/>
                             <constraint firstAttribute="trailing" secondItem="I9U-SQ-MGi" secondAttribute="trailing" constant="43" id="Mhd-nU-25r"/>
+                            <constraint firstAttribute="trailing" secondItem="c1U-nr-CvM" secondAttribute="trailing" id="ODA-sZ-pmM"/>
                             <constraint firstItem="I9U-SQ-MGi" firstAttribute="leading" secondItem="Fuv-98-QCR" secondAttribute="leading" constant="44" id="QQT-XP-q6j"/>
                             <constraint firstItem="I9U-SQ-MGi" firstAttribute="bottom" secondItem="qdb-uu-2z0" secondAttribute="top" id="Rxx-cc-m18"/>
                             <constraint firstAttribute="trailing" secondItem="I9U-SQ-MGi" secondAttribute="trailing" id="f84-nE-B0H"/>
-                            <constraint firstItem="I9U-SQ-MGi" firstAttribute="top" secondItem="Rfw-sZ-moy" secondAttribute="bottom" constant="21" id="fjA-qw-Js3"/>
+                            <constraint firstItem="c1U-nr-CvM" firstAttribute="top" secondItem="Rfw-sZ-moy" secondAttribute="bottom" id="fYQ-JV-w2Q"/>
+                            <constraint firstItem="I9U-SQ-MGi" firstAttribute="top" secondItem="Rfw-sZ-moy" secondAttribute="bottom" constant="56" id="fjA-qw-Js3"/>
+                            <constraint firstItem="c1U-nr-CvM" firstAttribute="leading" secondItem="Fuv-98-QCR" secondAttribute="leading" id="lQJ-Fw-Sjg"/>
                             <constraint firstItem="qdb-uu-2z0" firstAttribute="top" secondItem="I9U-SQ-MGi" secondAttribute="bottom" id="nJo-4e-okW"/>
                         </constraints>
                         <variation key="default">
@@ -103,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gra-JC-ffe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1431" y="890"/>
+            <point key="canvasLocation" x="1462" y="858"/>
         </scene>
     </scenes>
 </document>
