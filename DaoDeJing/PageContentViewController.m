@@ -31,9 +31,9 @@
 }
 - (IBAction)onReadingButtonPushed:(UIBarButtonItem *)sender {
     NSLog(@"Reading Pushed");
-    // Present the view controller using the popover style.
-    UIPopoverController.modalPresentationStyle = UIModalPresentationPopover;
-    [self presentViewController:UIPopoverController animated: YES completion: nil];
+//    // Present the view controller using the popover style.
+//    UIPopoverController.modalPresentationStyle = UIModalPresentationPopover;
+//    [self presentViewController:UIPopoverController animated: YES completion: nil];
 
 //    // Get the popover presentation controller and configure it.
 //    UIPopoverPresentationController *presentationController =

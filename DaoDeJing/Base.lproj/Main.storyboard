@@ -84,6 +84,9 @@
                                     <barButtonItem title="Reading" id="ySk-7Z-XOi">
                                         <connections>
                                             <action selector="onReadingButtonPushed:" destination="TNa-eg-nbG" id="HCD-JE-BV4"/>
+                                            <segue destination="neF-Rw-E6h" kind="popoverPresentation" popoverAnchorBarButtonItem="ySk-7Z-XOi" id="sAs-pX-r9b">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Settings" id="BUV-VR-Kg5"/>
@@ -121,7 +124,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gra-JC-ffe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1462" y="858"/>
+            <point key="canvasLocation" x="1292" y="846"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NGb-js-eun">
+            <objects>
+                <viewController id="neF-Rw-E6h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qI0-iG-Adz"/>
+                        <viewControllerLayoutGuide type="bottom" id="RLZ-9W-MPl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fh3-Ki-Rjb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fms-EP-i18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952" y="846"/>
         </scene>
     </scenes>
 </document>
