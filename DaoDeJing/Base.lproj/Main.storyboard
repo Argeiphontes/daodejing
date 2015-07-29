@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -55,7 +55,7 @@
                 <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" modalTransitionStyle="partialCurl" modalPresentationStyle="pageSheet" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="hv2-w8-abf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srP-U4-2Xf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="183"/>
+            <point key="canvasLocation" x="1296" y="433"/>
         </scene>
         <!--PageContent-->
         <scene sceneID="yZP-oY-J3x">
@@ -83,10 +83,7 @@
                                     <barButtonItem title="TOC" id="LN6-UX-yoA"/>
                                     <barButtonItem title="Reading" id="ySk-7Z-XOi">
                                         <connections>
-                                            <action selector="onReadingButtonPushed:" destination="TNa-eg-nbG" id="HCD-JE-BV4"/>
-                                            <segue destination="neF-Rw-E6h" kind="popoverPresentation" popoverAnchorBarButtonItem="ySk-7Z-XOi" id="sAs-pX-r9b">
-                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                            </segue>
+                                            <action selector="onReadingButtonPushed:" destination="TNa-eg-nbG" id="eTz-KY-xpm"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem title="Settings" id="BUV-VR-Kg5"/>
@@ -118,31 +115,14 @@
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="Blo-Og-jRr"/>
                     <connections>
                         <outlet property="textView" destination="I9U-SQ-MGi" id="i5w-rv-jzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gra-JC-ffe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="846"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="NGb-js-eun">
-            <objects>
-                <viewController id="neF-Rw-E6h" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qI0-iG-Adz"/>
-                        <viewControllerLayoutGuide type="bottom" id="RLZ-9W-MPl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Fh3-Ki-Rjb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fms-EP-i18" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1952" y="846"/>
+            <point key="canvasLocation" x="1952" y="433"/>
         </scene>
     </scenes>
 </document>

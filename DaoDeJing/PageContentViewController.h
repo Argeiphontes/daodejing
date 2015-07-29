@@ -8,10 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol PageContentViewControllerDelegate;
+
 @interface PageContentViewController : UIViewController
+
+@property (nonatomic, readonly) UITextView *textView;
+
+// qualified as weak to avoid circular reference
+@property (weak, nonatomic) id <PageContentViewControllerDelegate> delegate;
+
 
 @property NSUInteger pageIndex;
 @property NSString *selectedVerseText;
 
+@end
+
+
+@protocol PageContentViewControllerDelegate <NSObject>
+
+-(void)pageContentViewController:(PageContentViewController *)controller
+                  didSetLanguage:(NSString *)language;
 
 @end

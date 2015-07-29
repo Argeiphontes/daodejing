@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import "PageContentViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <PageContentViewControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITextView *textView;
 @property NSString *verses;
+@property NSString *selectedLanguage;
 @property NSArray *simpleVerses;
 @property NSArray *traditionalVerses;
 @property NSArray *englishVerses;
@@ -32,7 +33,21 @@
 //    self.textView.text = self.simpleVerses[7];
 }
 
+-(void)pageContentViewController:(PageContentViewController *)controller
+                  didSetLanguage:(NSString *)language
+{
+    NSLog(@"setting language");
 
+    NSString *text = @"Unknown";
+    if ([language isEqualToString:@"English"]) {
+        text = self.englishVerses[controller.pageIndex];
+    } else if ([language isEqualToString:@"Simplified"]) {
+        text = self.simpleVerses[controller.pageIndex];
+    } else if ([language isEqualToString:@"Traditional"]) {
+        text = self.traditionalVerses [controller.pageIndex];
+    }
+    controller.textView.text = text;
+}
 
 -(void)initializeVerses
 {
@@ -68,6 +83,8 @@
     self.pageViewController.dataSource = self;
 
     PageContentViewController *startingViewController = [self viewControllerAtIndex:0];
+    startingViewController.delegate = self;
+
     NSArray *viewControllers = @[startingViewController];
     [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];
 
@@ -118,7 +135,8 @@
     PageContentViewController *pageContentViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"PageContentViewController"];
     //    pageContentViewController.imageFile = self.pageImages[index];
 // This line needs to be edited to allow for Traditional, Simplified, or English Texts
-    pageContentViewController.selectedVerseText = self.traditionalVerses[index];
+    pageContentViewController.delegate = self;
+    pageContentViewController.selectedVerseText = self.simpleVerses[index];
     pageContentViewController.view.backgroundColor = [UIColor colorWithRed:0.2 green:0.4 blue:0.6 alpha:1];
 
     pageContentViewController.pageIndex = index;
