@@ -16,19 +16,21 @@
 
 @implementation PageContentViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-//    self.textView.text = @"Here we are";
-    UIFont *font = [UIFont fontWithName:@"STHeitiSC-Light" size:24];
 
-//    UIFont *font = [UIFont fontWithName:@"STHeitiSC-Medium" size:24];
-//    UIFont *font = [UIFont fontWithName:@"HiraKakuProN-W6" size:24];
-
-
-    [_textView setFont:font];
-    self.textView.text = self.selectedVerseText;
-
+    [self reloadData];
 }
+
+- (void)reloadData
+{
+    NSString *text = [self.delegate textForPageContentViewController:self];
+    UIFont *font = [self.delegate fontForPageContentViewController:self];
+    self.textView.font = font;
+    self.textView.text = text;
+}
+
 - (IBAction)onReadingButtonPushed:(UIBarButtonItem *)sender {
     NSLog(@"Reading Pushed");
 
@@ -38,12 +40,6 @@
 
     UIAlertAction *englishAction = [UIAlertAction actionWithTitle:@"English" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         [self.delegate pageContentViewController:self didSetLanguage:@"English"];
-
-//        [self.delegate didRequestEnglish];
-
-        //Set Language to English
-        
-
     }];
     [actionSheet addAction:englishAction];
 
@@ -52,7 +48,6 @@
         //Set Language to Simplified
         [self.delegate pageContentViewController:self didSetLanguage:@"Simplified"];
 
-
     }];
     [actionSheet addAction:simplifiedAction];
 
@@ -60,6 +55,8 @@
         NSLog(@"Show traditional");
         // Set Language to Traditional
         [self.delegate pageContentViewController:self didSetLanguage:@"Traditional"];
+        UIFont *font = [UIFont fontWithName:@"STHeitiSC-Light" size:24];
+        [_textView setFont:font];
 
     }];
     [actionSheet addAction:traditionalAction];
@@ -100,6 +97,23 @@
 //        popPC.delegate = self;
 //    }
 //}
+
+- (IBAction)onAudioButtonPushed:(UIBarButtonItem *)sender {
+    NSLog(@"Pushed Audio Button");
+    // Found this code on http://stackoverflow.com/questions/11525942/play-audio-ios-objective-c
+    /* Use this code to play an audio file */
+//    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"test"
+//                                                              ofType:@"m4a"];
+//    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+//
+//    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+//                                                                   error:nil];
+//    player.numberOfLoops = 1; //Infinite
+//    
+//    [player play];
+
+}
+
 
 - (IBAction)returnToPageContent:(UIStoryboardSegue *)segue {
     NSLog(@"And now we are back.");

@@ -16,6 +16,7 @@
 @property NSArray *simpleVerses;
 @property NSArray *traditionalVerses;
 @property NSArray *englishVerses;
+@property NSArray *audioVerses;
 @property NSAttributedString *attributedString;
 
 @end
@@ -24,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.selectedLanguage = @"Simplified";
+
 
 //    NSAttributedString *attributedString = [[NSAttributedString alloc] initWithString:@"a clickable word" attributes:@{ @"myCustomTag" : @(YES) }];
 ////    [paragraph appendAttributedString:attributedString];
@@ -31,22 +34,6 @@
     [self initializeVerses];
     [self initializePageViewController];
 //    self.textView.text = self.simpleVerses[7];
-}
-
--(void)pageContentViewController:(PageContentViewController *)controller
-                  didSetLanguage:(NSString *)language
-{
-    NSLog(@"setting language");
-
-    NSString *text = @"Unknown";
-    if ([language isEqualToString:@"English"]) {
-        text = self.englishVerses[controller.pageIndex];
-    } else if ([language isEqualToString:@"Simplified"]) {
-        text = self.simpleVerses[controller.pageIndex];
-    } else if ([language isEqualToString:@"Traditional"]) {
-        text = self.traditionalVerses [controller.pageIndex];
-    }
-    controller.textView.text = text;
 }
 
 -(void)initializeVerses
@@ -57,6 +44,8 @@
     self.simpleVerses = [self arrayOfStringsFromPlistWithName:@"Simplified"];
 
     self.englishVerses = [self arrayOfStringsFromPlistWithName:@"EnglishVerses"];
+
+    self.audioVerses = [self arrayOfStringsFromPlistWithName:@"Audio"];
 
     return;
 }
@@ -72,6 +61,39 @@
     }
 
     return processedStrings;
+}
+#pragma mark - <PageContentViewControllerDelegate>
+
+-(void)pageContentViewController:(PageContentViewController *)controller
+                  didSetLanguage:(NSString *)language
+{
+    self.selectedLanguage = language;
+    [controller reloadData];
+}
+
+- (NSString *)textForPageContentViewController:(PageContentViewController *)controller
+{
+    NSString *text = @"Unknown";
+    if ([self.selectedLanguage isEqualToString:@"English"]) {
+        text = self.englishVerses[controller.pageIndex];
+    } else if ([self.selectedLanguage isEqualToString:@"Simplified"]) {
+        text = self.simpleVerses[controller.pageIndex];
+    } else if ([self.selectedLanguage isEqualToString:@"Traditional"]) {
+        text = self.traditionalVerses [controller.pageIndex];
+    }
+
+    return text;
+}
+
+- (UIFont *)fontForPageContentViewController:(PageContentViewController *)controller
+{
+    if ([self.selectedLanguage isEqualToString:@"English"])
+    {
+        return [UIFont fontWithName:@"GillSans" size:15];
+    }
+    else {
+        return [UIFont fontWithName:@"STHeitiSC-Light" size:24];
+    }
 }
 
 #pragma mark - Create the Page View Controller
@@ -136,9 +158,6 @@
     //    pageContentViewController.imageFile = self.pageImages[index];
 // This line needs to be edited to allow for Traditional, Simplified, or English Texts
     pageContentViewController.delegate = self;
-    pageContentViewController.selectedVerseText = self.simpleVerses[index];
-    pageContentViewController.view.backgroundColor = [UIColor colorWithRed:0.2 green:0.4 blue:0.6 alpha:1];
-
     pageContentViewController.pageIndex = index;
 
     return pageContentViewController;

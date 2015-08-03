@@ -18,7 +18,10 @@
  4.  Create button for toggling languages E/S/T
  4.5  Problem with Keyboard popping up - disable editing of text
  5.  Add audio to Poem 1
- 5.  Create Glossary/Commentary for first 3 poems
+ 6.  Maintain language after selection
+ 7.  Create Title Page
+ 8.  Create Table of Contents Page
+ 9.  Create Glossary/Commentary for first poem
 
  Notes
 

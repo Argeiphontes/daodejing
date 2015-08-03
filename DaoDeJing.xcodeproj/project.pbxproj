@@ -18,6 +18,7 @@
 		814B99151A290F2900BE4055 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814B99141A290F2900BE4055 /* Images.xcassets */; };
 		814B99181A290F2900BE4055 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814B99161A290F2900BE4055 /* LaunchScreen.xib */; };
 		814B99241A290F2900BE4055 /* DaoDeJingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 814B99231A290F2900BE4055 /* DaoDeJingTests.m */; };
+		819AE11A1B6D662A001D3667 /* Audio.plist in Resources */ = {isa = PBXBuildFile; fileRef = 819AE1191B6D662A001D3667 /* Audio.plist */; };
 		81ECDF481A79D0310042995F /* DaoDeJing-Traditional.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */; };
 		81ECDF491A79D0310042995F /* DaoDeJing-Traditional.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */; };
 		81ECDF4B1A79D33C0042995F /* Simplified.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81ECDF4A1A79D33C0042995F /* Simplified.plist */; };
@@ -54,6 +55,7 @@
 		814B991D1A290F2900BE4055 /* DaoDeJingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaoDeJingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		814B99221A290F2900BE4055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		814B99231A290F2900BE4055 /* DaoDeJingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaoDeJingTests.m; sourceTree = "<group>"; };
+		819AE1191B6D662A001D3667 /* Audio.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Audio.plist; sourceTree = "<group>"; };
 		81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DaoDeJing-Traditional.plist"; sourceTree = "<group>"; };
 		81ECDF4A1A79D33C0042995F /* Simplified.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Simplified.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,6 +115,7 @@
 				81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */,
 				81ECDF4A1A79D33C0042995F /* Simplified.plist */,
 				8105B4791AA4631100502840 /* EnglishVerses.plist */,
+				819AE1191B6D662A001D3667 /* Audio.plist */,
 			);
 			path = DaoDeJing;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				8105B47A1AA4631100502840 /* EnglishVerses.plist in Resources */,
 				81ECDF481A79D0310042995F /* DaoDeJing-Traditional.plist in Resources */,
 				814B99151A290F2900BE4055 /* Images.xcassets in Resources */,
+				819AE11A1B6D662A001D3667 /* Audio.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

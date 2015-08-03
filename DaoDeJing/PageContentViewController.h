@@ -19,7 +19,8 @@
 
 
 @property NSUInteger pageIndex;
-@property NSString *selectedVerseText;
+
+- (void)reloadData;
 
 @end
 
@@ -28,5 +29,9 @@
 
 -(void)pageContentViewController:(PageContentViewController *)controller
                   didSetLanguage:(NSString *)language;
+
+-(NSString *)textForPageContentViewController:(PageContentViewController *)controller;
+
+-(UIFont *)fontForPageContentViewController:(PageContentViewController *)controller;
 
 @end
