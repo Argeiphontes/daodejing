@@ -27,11 +27,13 @@
 
 @protocol PageContentViewControllerDelegate <NSObject>
 
--(void)pageContentViewController:(PageContentViewController *)controller
+- (void)pageContentViewController:(PageContentViewController *)controller
                   didSetLanguage:(NSString *)language;
 
--(NSString *)textForPageContentViewController:(PageContentViewController *)controller;
+- (NSString *)textForPageContentViewController:(PageContentViewController *)controller;
 
--(UIFont *)fontForPageContentViewController:(PageContentViewController *)controller;
+- (UIFont *)fontForPageContentViewController:(PageContentViewController *)controller;
+
+- (NSURL *)soundFileURLForPageContentViewController:(PageContentViewController *)controller;
 
 @end

@@ -85,6 +85,21 @@
     return text;
 }
 
+- (NSURL *)soundFileURLForPageContentViewController:(PageContentViewController *)controller
+{
+    NSUInteger index = controller.pageIndex + 1;
+
+    NSString *fileName = [NSString stringWithFormat:@"Chapter%lu", index];
+
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:fileName
+                                                              ofType:@"m4a"];
+    if (soundFilePath) {
+        return [NSURL fileURLWithPath:soundFilePath];
+    }
+
+    return nil;
+}
+
 - (UIFont *)fontForPageContentViewController:(PageContentViewController *)controller
 {
     if ([self.selectedLanguage isEqualToString:@"English"])

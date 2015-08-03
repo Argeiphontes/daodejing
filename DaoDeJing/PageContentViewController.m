@@ -7,11 +7,15 @@
 //
 
 #import "PageContentViewController.h"
+#import <AVFoundation/AVFoundation.h>
+
 
 @interface PageContentViewController () <UIPopoverPresentationControllerDelegate>
 
+@property (nonatomic) IBOutlet UITextView *textView;
+@property (nonatomic) AVAudioPlayer *player;
 
-@property (strong, nonatomic) IBOutlet UITextView *textView;
+
 @end
 
 @implementation PageContentViewController
@@ -98,22 +102,17 @@
 //    }
 //}
 
-- (IBAction)onAudioButtonPushed:(UIBarButtonItem *)sender {
-    NSLog(@"Pushed Audio Button");
-    // Found this code on http://stackoverflow.com/questions/11525942/play-audio-ios-objective-c
-    /* Use this code to play an audio file */
-//    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"test"
-//                                                              ofType:@"m4a"];
-//    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
-//
-//    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
-//                                                                   error:nil];
-//    player.numberOfLoops = 1; //Infinite
-//    
-//    [player play];
+- (IBAction)onAudioButtonPushed:(UIBarButtonItem *)sender
+{
+    NSURL *soundFileURL = [self.delegate soundFileURLForPageContentViewController:self];
+    if (soundFileURL) {
+        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL
+                                                             error:nil];
 
+        self.player.numberOfLoops = 0; //Infinite
+        [self.player play];
+    }
 }
-
 
 - (IBAction)returnToPageContent:(UIStoryboardSegue *)segue {
     NSLog(@"And now we are back.");

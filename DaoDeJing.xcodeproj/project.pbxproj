@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		810375381B6F176B009B4795 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 810375371B6F176B009B4795 /* AVFoundation.framework */; };
+		8103753A1B6F17C1009B4795 /* Chapter1.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 810375391B6F17C1009B4795 /* Chapter1.m4a */; };
+		8103753C1B6F1EEC009B4795 /* Chapter8.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8103753B1B6F1EEC009B4795 /* Chapter8.m4a */; };
+		810375401B6F1F2E009B4795 /* Chapter9.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8103753E1B6F1F2E009B4795 /* Chapter9.m4a */; };
+		810375411B6F1F2E009B4795 /* Chapter39.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 8103753F1B6F1F2E009B4795 /* Chapter39.m4a */; };
 		8105B4781AA4549300502840 /* PageContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8105B4771AA4549300502840 /* PageContentViewController.m */; };
 		8105B47A1AA4631100502840 /* EnglishVerses.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8105B4791AA4631100502840 /* EnglishVerses.plist */; };
 		81418ADD1AA968A5004B015C /* PopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81418ADC1AA968A5004B015C /* PopoverViewController.m */; };
@@ -18,7 +23,6 @@
 		814B99151A290F2900BE4055 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814B99141A290F2900BE4055 /* Images.xcassets */; };
 		814B99181A290F2900BE4055 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 814B99161A290F2900BE4055 /* LaunchScreen.xib */; };
 		814B99241A290F2900BE4055 /* DaoDeJingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 814B99231A290F2900BE4055 /* DaoDeJingTests.m */; };
-		819AE11A1B6D662A001D3667 /* Audio.plist in Resources */ = {isa = PBXBuildFile; fileRef = 819AE1191B6D662A001D3667 /* Audio.plist */; };
 		81ECDF481A79D0310042995F /* DaoDeJing-Traditional.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */; };
 		81ECDF491A79D0310042995F /* DaoDeJing-Traditional.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */; };
 		81ECDF4B1A79D33C0042995F /* Simplified.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81ECDF4A1A79D33C0042995F /* Simplified.plist */; };
@@ -36,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		810375371B6F176B009B4795 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		810375391B6F17C1009B4795 /* Chapter1.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chapter1.m4a; sourceTree = "<group>"; };
+		8103753B1B6F1EEC009B4795 /* Chapter8.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chapter8.m4a; sourceTree = "<group>"; };
+		8103753E1B6F1F2E009B4795 /* Chapter9.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chapter9.m4a; sourceTree = "<group>"; };
+		8103753F1B6F1F2E009B4795 /* Chapter39.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chapter39.m4a; sourceTree = "<group>"; };
 		8105B4761AA4549300502840 /* PageContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageContentViewController.h; sourceTree = "<group>"; };
 		8105B4771AA4549300502840 /* PageContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageContentViewController.m; sourceTree = "<group>"; };
 		8105B4791AA4631100502840 /* EnglishVerses.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnglishVerses.plist; sourceTree = "<group>"; };
@@ -55,7 +64,6 @@
 		814B991D1A290F2900BE4055 /* DaoDeJingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DaoDeJingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		814B99221A290F2900BE4055 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		814B99231A290F2900BE4055 /* DaoDeJingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DaoDeJingTests.m; sourceTree = "<group>"; };
-		819AE1191B6D662A001D3667 /* Audio.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Audio.plist; sourceTree = "<group>"; };
 		81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DaoDeJing-Traditional.plist"; sourceTree = "<group>"; };
 		81ECDF4A1A79D33C0042995F /* Simplified.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Simplified.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				810375381B6F176B009B4795 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +87,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8103753D1B6F1F0A009B4795 /* Audio Files */ = {
+			isa = PBXGroup;
+			children = (
+				8103753E1B6F1F2E009B4795 /* Chapter9.m4a */,
+				8103753F1B6F1F2E009B4795 /* Chapter39.m4a */,
+				810375391B6F17C1009B4795 /* Chapter1.m4a */,
+				8103753B1B6F1EEC009B4795 /* Chapter8.m4a */,
+			);
+			name = "Audio Files";
+			sourceTree = "<group>";
+		};
 		814B98F81A290F2900BE4055 = {
 			isa = PBXGroup;
 			children = (
+				810375371B6F176B009B4795 /* AVFoundation.framework */,
 				814B99031A290F2900BE4055 /* DaoDeJing */,
 				814B99201A290F2900BE4055 /* DaoDeJingTests */,
 				814B99021A290F2900BE4055 /* Products */,
@@ -115,7 +136,6 @@
 				81ECDF471A79D0310042995F /* DaoDeJing-Traditional.plist */,
 				81ECDF4A1A79D33C0042995F /* Simplified.plist */,
 				8105B4791AA4631100502840 /* EnglishVerses.plist */,
-				819AE1191B6D662A001D3667 /* Audio.plist */,
 			);
 			path = DaoDeJing;
 			sourceTree = "<group>";
@@ -123,6 +143,7 @@
 		814B99041A290F2900BE4055 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8103753D1B6F1F0A009B4795 /* Audio Files */,
 				814B99051A290F2900BE4055 /* Info.plist */,
 				814B99061A290F2900BE4055 /* main.m */,
 			);
@@ -227,12 +248,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				814B99131A290F2900BE4055 /* Main.storyboard in Resources */,
+				810375401B6F1F2E009B4795 /* Chapter9.m4a in Resources */,
+				8103753C1B6F1EEC009B4795 /* Chapter8.m4a in Resources */,
 				814B99181A290F2900BE4055 /* LaunchScreen.xib in Resources */,
+				8103753A1B6F17C1009B4795 /* Chapter1.m4a in Resources */,
 				81ECDF4B1A79D33C0042995F /* Simplified.plist in Resources */,
 				8105B47A1AA4631100502840 /* EnglishVerses.plist in Resources */,
 				81ECDF481A79D0310042995F /* DaoDeJing-Traditional.plist in Resources */,
+				810375411B6F1F2E009B4795 /* Chapter39.m4a in Resources */,
 				814B99151A290F2900BE4055 /* Images.xcassets in Resources */,
-				819AE11A1B6D662A001D3667 /* Audio.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
